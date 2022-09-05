@@ -1,0 +1,46 @@
+make: 进入目录“/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475”
+make[1]: 进入目录“/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out”
+  SYNC    include/config/auto.conf.cmd
+  GEN     Makefile
+  GEN     Makefile
+  CALL    ../scripts/atomic/check-atomics.sh
+  CALL    ../scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  UPD     kernel/config_data
+  CHK     kernel/kheaders_data.tar.xz
+  GEN     kernel/kheaders_data.tar.xz
+  GZIP    kernel/config_data.gz
+  CC      kernel/configs.o
+  CC      kernel/kheaders.o
+  AR      kernel/built-in.a
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  AR      init/built-in.a
+  LD      vmlinux.o
+  MODPOST vmlinux.symvers
+  MODINFO modules.builtin.modinfo
+  GEN     modules.builtin
+  LD      .tmp_vmlinux.kallsyms1
+ld.lld: error: undefined symbol: build_variant
+>>> referenced by oplus_project.c:300 (/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out/../drivers/soc/oplus/system/oplus_project/gki/oplus_project.c:300)
+>>>               soc/oplus/system/oplus_project/gki/oplus_project.o:(oplus_daily_build) in archive drivers/built-in.a
+>>> referenced by oplus_project.c:300 (/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out/../drivers/soc/oplus/system/oplus_project/gki/oplus_project.c:300)
+>>>               soc/oplus/system/oplus_project/gki/oplus_project.o:(oplus_daily_build) in archive drivers/built-in.a
+>>> referenced by oplus_project.c:301 (/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out/../drivers/soc/oplus/system/oplus_project/gki/oplus_project.c:301)
+>>>               soc/oplus/system/oplus_project/gki/oplus_project.o:(oplus_daily_build) in archive drivers/built-in.a
+>>> referenced 1 more times
+
+ld.lld: error: undefined symbol: serial_no
+>>> referenced by oplus_project.c:344 (/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out/../drivers/soc/oplus/system/oplus_project/gki/oplus_project.c:344)
+>>>               soc/oplus/system/oplus_project/gki/oplus_project.o:(get_serialID) in archive drivers/built-in.a
+>>> referenced by oplus_project.c:344 (/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out/../drivers/soc/oplus/system/oplus_project/gki/oplus_project.c:344)
+>>>               soc/oplus/system/oplus_project/gki/oplus_project.o:(get_serialID) in archive drivers/built-in.a
+>>> referenced by oplus_project.c:344 (/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out/../drivers/soc/oplus/system/oplus_project/gki/oplus_project.c:344)
+>>>               soc/oplus/system/oplus_project/gki/oplus_project.o:(project_read_func) in archive drivers/built-in.a
+>>> referenced 1 more times
+make[1]: *** [/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/Makefile:1394：vmlinux] 错误 1
+make[1]: 离开目录“/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475/out”
+make: *** [Makefile:189：__sub-make] 错误 2
+make: 离开目录“/media/grandthief/Ubuntu/Kernel/KernelSource/oneplus_sm8475”
